@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damian Portfolio</title>
+    <style>
+        /* Resetowanie marginesów i paddingu */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Pasek nawigacyjny */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        /* Stylizacja bloków */
+        section {
+            color: #fff;
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+
+        #home {
+            background: #414141;
+            text-align: center;
+        }
+
+        #home a:visited {
+            color: rgb(255, 56, 56);
+        }        
+
+        #projects {
+            background: #525252;
+        }
+
+        #skills {
+            background: #646464;
+        }
+
+        #contact {
+            background: #7e7e7e;
+        }
+
+        /* Nagłówki sekcji */
+        section h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            text-align: center;
+        }
+
+        section h3 {
+            text-align: center;
+        }
+
+        /* Stylizacja formularza kontaktowego */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form input, form textarea {
+            width: 300px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Pasek nawigacyjny -->
+<nav>
+    <ul>
+        <li><a href="#home">About me</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#skills">Tools</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Sekcja "O mnie" -->
+<section id="home">
+    <h1>About me</h1>
+    <p style="text-align:center;">Hi! I'm Damian, a programmer with a passion for creating games and applications. In my work, I focus on delivering high-quality solutions that are optimized and functional.</p>
+    </br>
+    <p><h2>Links</h2></p>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://layzflff.itch.io/">Itch.io</a></p>
+</section>
+
+<!-- Sekcja "Moje Projekty" -->
+<section id="projects">
+    <h1>My Projects</h1>
+    <div style="text-align:center;">
+        </br>
+        <p><h3>Drink it, trust me!</h3></p>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://ssamaelx.itch.io/drink-it-trust-me">Link to the game</a></p>
+        <p>Opis projektu: Projekt stworzony podczas wewnętrznego Game Jamu organizowanego na uczelni Uniwersytet DSW.</br>Jesteś lekarzem, od którego zależne jest ludzkie życie. Czy wszystkie jednak należy ratować?</p>
+        
+        </br>
+        <p><h3>Wee Lemmy Party</h3></p>
+        <p><!--<a target="_blank" rel="noopener noreferrer" href="">-->Link to the game - Soon!<!--</a>--></p>
+        <p>Opis projektu: Projekt stworzony podczas wydarzenia HackYeah.</br>Zbuduj zespół lemurków i pokonaj katastrofy ekonomiczne!</p>
+        <!--</br>-->
+        <!--<p><h2>Projekt 2: [Tytuł gry lub aplikacji]</h2></p>-->
+        <!--<p>Opis projektu: [Krótki opis projektu]</p>-->
+
+        <!-- Dodaj więcej projektów wedle potrzeb -->
+    </div>
+</section>
+
+<!-- Sekcja "Umiejętności" -->
+<section id="skills">
+    <h1>Tools</h1>
+    <div style="text-align:center;">
+        <p><h3>LayZLogger</h3></p>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://assetstore.unity.com/packages/slug/298699">Link to the unity asset store</a></p>
+        <p>Tool that helps you manage your logs in Unity</p>
+        
+        </br>
+        <p><h3>String to Equation converter</h3></p>
+        <p><!--<a target="_blank" rel="noopener noreferrer" href="">-->Link Soon!<!--</a>--></p>
+        <p>Tool that converts string into an equation. Very usefull, especially when your Game Designer didn't specify what "part" of the refund is</p>
+    </div>
+</section>
+
+<!-- Sekcja "Kontakt" -->
+<section id="contact">
+    <h1>Contact</h1>
+    <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your email address" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <input type="submit" value="Send - soon" disabled>
+    </form>
+</section>
+
+<!-- JavaScript do płynnego przewijania -->
+<script>
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
