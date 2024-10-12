@@ -52,13 +52,11 @@
 
         /* Stylizacja bloków */
         section {
+            text-align: left;
+            margin-left: 100px;
             color: #fff;
-            padding: 100px 20px;
+            padding: 100px 100px;
             min-height: 100vh;
-        }
-
-        #home {
-            text-align: center;
         }
 
         section a:visited {
@@ -67,24 +65,27 @@
 
         /* Nagłówki sekcji */
         section h1 {
-            text-align: center;
             font-size: 40px;
             margin-bottom: 40px;
+            margin-left: 50px;
         }
 
         section h2 {
-            text-align: center;
+            margin-top: 20px;
+            margin-left: -10px;
+            margin-bottom: 10px;
         }
-
         section h3 {
-            text-align: center;
+            margin-top: 20px;
+            margin-left: -10px;
+            margin-bottom: 10px;
         }
 
         /* Stylizacja formularza kontaktowego */
         form {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left;
         }
 
         form input, form textarea {
@@ -107,6 +108,10 @@
             background-color: #555;
         }
 
+        #contact h1{
+            margin-left: 80px;
+        }
+
         .backgroundCanvas {
         width: 100vw;
         height: 100vh;
@@ -122,7 +127,7 @@
     <ul>
         <li><a href="#home">About me</a></li>
         <li><a href="#projects">My Projects</a></li>
-        <li><a href="#skills">Tools</a></li>
+        <li><a href="#tools">Tools</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -133,11 +138,11 @@
 <!-- Sekcja "O mnie" -->
 <section id="home">
     <h1>About me</h1>
-    <p style="text-align:center;">Hi! I'm Damian, a programmer with a passion for creating games and applications. In my work, I focus on delivering high-quality solutions that are optimized and functional.</p>
+    <p>Hi! I'm Damian, a programmer with a passion for creating games and applications. In my work, I focus on delivering high-quality solutions that are optimized and functional.</p>
 
-    </br>
-    <p><h2>General Knowledge</h2></p>
-    <p>C#, Unity, Unity's packages</p>
+    </br></br></br>
+    <p><h2>General focus</h2></p>
+    <p>C#, Unity, Unity's packages, Tools</p>
 
     </br>
     <p><h2>Links</h2></p>
@@ -149,7 +154,6 @@
 <!-- Sekcja "Moje Projekty" -->
 <section id="projects">
     <h1>My Projects</h1>
-    <div style="text-align:center;">
         </br>
         <p><h3>Drink it, trust me!</h3></p>
         <p><a target="_blank" rel="noopener noreferrer" href="https://ssamaelx.itch.io/drink-it-trust-me">Link to the game</a></p>
@@ -164,13 +168,12 @@
         <!--<p>Opis projektu: [Krótki opis projektu]</p>-->
 
         <!-- Dodaj więcej projektów wedle potrzeb -->
-    </div>
 </section>
 
 <!-- Sekcja "Umiejętności" -->
-<section id="skills">
+<section id="tools">
     <h1>Tools</h1>
-    <div style="text-align:center;">
+    <div>
         <p><h3>LayZLogger</h3></p>
         <p><a target="_blank" rel="noopener noreferrer" href="https://assetstore.unity.com/packages/slug/298699">Link to the unity asset store</a></p>
         <p>Tool that helps you manage your logs in Unity</p>
@@ -184,7 +187,7 @@
 
 <!-- Sekcja "Kontakt" -->
 <section id="contact">
-    <h1>Contact</h1>
+    <h1 id="contactTitle">Contact</h1>
     <form action="#" method="POST">
         <input type="text" name="name" placeholder="Your Full Name" required>
         <input type="email" name="email" placeholder="Your email address" required>
