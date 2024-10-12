@@ -58,25 +58,12 @@
         }
 
         #home {
-            background: #414141;
             text-align: center;
         }
 
-        #home a:visited {
+        section a:visited {
             color: rgb(255, 56, 56);
         }        
-
-        #projects {
-            background: #525252;
-        }
-
-        #skills {
-            background: #646464;
-        }
-
-        #contact {
-            background: #7e7e7e;
-        }
 
         /* Nagłówki sekcji */
         section h1 {
@@ -119,6 +106,13 @@
         form input[type="submit"]:hover {
             background-color: #555;
         }
+
+        .backgroundCanvas {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: -1;
+        }   
     </style>
 </head>
 <body>
@@ -132,6 +126,9 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
+
+<canvas id="backgroundCanvas" class="backgroundCanvas"></canvas>
+<script src="background.js"></script>
 
 <!-- Sekcja "O mnie" -->
 <section id="home">
