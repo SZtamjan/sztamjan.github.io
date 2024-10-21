@@ -24,18 +24,38 @@
             left: 0;
             width: 100%;
             background-color: #333;
-            padding: 10px 0;
             z-index: 1000;
+            padding: 10px 0;
+        }
+
+        nav .nav-container {
+            display: flex;
+            justify-content: space-between;   /*Ustawia przestrzeń między obrazkiem a listą */
+            align-items: center;  /* Wyrównuje pionowo do środka */
+            padding: 0 20px;  /* Opcjonalnie, dodaj odstęp od krawędzi */
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
             list-style: none;
+            align-items: center;
+            margin-left: 0;
+            padding: 0;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 15px;  /* Odstęp między przyciskami */
+        }
+
+        nav .logo {
+            height: 50px;
+            width: auto;
+        } 
+
+        .nav-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);  /* Wycentrowanie na środku */
         }
 
         nav ul li a {
@@ -111,7 +131,7 @@
         #contact h1{
             margin-left: 80px;
         }
-
+        
         .backgroundCanvas {
         width: 100vw;
         height: 100vh;
@@ -123,14 +143,22 @@
 <body>
 
 <!-- Pasek nawigacyjny -->
-<nav>
-    <ul>
-        <li><a href="#home">About me</a></li>
-        <li><a href="#projects">My Projects</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+
+    
+        <nav>
+            <div class="nav-container">
+                <img src="logo.png" class="logo">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#home">About me</a></li>
+                        <li><a href="#projects">My Projects</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
 
 <canvas id="backgroundCanvas" class="backgroundCanvas"></canvas>
 <script src="background.js"></script>
