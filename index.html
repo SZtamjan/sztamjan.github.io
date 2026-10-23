@@ -3,280 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Damian Portfolio</title>
-    <style>
-        /* Resetowanie marginesów i paddingu */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Pasek nawigacyjny */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            z-index: 1000;
-            padding: 10px 0;
-        }
-
-        nav .nav-container {
-            display: flex;
-            justify-content: space-between;   /*Ustawia przestrzeń między obrazkiem a listą */
-            align-items: center;  /* Wyrównuje pionowo do środka */
-            padding: 0 20px;  /* Opcjonalnie, dodaj odstęp od krawędzi */
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            align-items: center;
-            margin-left: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;  /* Odstęp między przyciskami */
-        }
-
-        nav .logo {
-            height: 50px;
-            width: auto;
-        } 
-
-        .nav-links {
-            width: max-content;
-            white-space: nowrap;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);  /* Wycentrowanie na środku */
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 8px 16px;
-            transition: background 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-            border-radius: 4px;
-        }
-
-        /* Stylizacja bloków */
-        section {
-            text-align: left;
-            margin-left: 100px;
-            color: #fff;
-            padding: 100px 100px;
-            min-height: 100vh;
-        }
-
-        section a {
-            color: rgb(194, 194, 194);
-        } 
-
-        section a:visited {
-            color: rgb(255, 56, 56);
-        }        
-
-        /* Nagłówki sekcji */
-        section h1 {
-            font-size: 40px;
-            margin-bottom: 40px;
-            margin-left: 50px;
-        }
-
-        section h2 {
-            margin-top: 20px;
-            margin-left: -10px;
-            margin-bottom: 10px;
-        }
-        section h3 {
-            margin-top: 20px;
-            margin-left: -10px;
-            margin-bottom: 10px;
-        }
-
-        /* Stylizacja formularza kontaktowego */
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-        }
-
-        form input, form textarea {
-            width: 300px;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #333;
-            border-radius: 4px;
-        }
-
-        form input[type="submit"] {
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        form input[type="submit"]:hover {
-            background-color: #555;
-        }
-
-        #contact h1{
-            margin-left: 80px;
-        }
-        
-        .backgroundCanvas {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        }   
-    </style>
+    <meta name="description" content="Damian — C#/.NET developer. Applications, developer tools and commercial Unity multiplayer experience.">
+    <meta name="theme-color" content="#181818">
+    <title>Damian — C#/.NET Developer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<!-- Pasek nawigacyjny -->
-<nav>
-    <div class="nav-container">
-        <img src="logo.png" class="logo" alt="Damian's logo">
-        <div class="nav-links">
-            <ul>
-                <li><a href="#home">About me</a></li>
-                <li><a href="#experience">Professional experience</a></li>
-                <li><a href="#projects">My Projects</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
+<a class="skip-link" href="#home">Skip to content</a>
+<header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+        <a class="identity" href="#home" aria-label="Damian — About me">
+            <img src="logo.png" width="44" height="44" alt="">
+            <span>Damian</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">About me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 <canvas id="backgroundCanvas" class="backgroundCanvas" aria-hidden="true"></canvas>
+<main>
+    <section id="home" aria-labelledby="about-title">
+        <div class="section-content">
+            <header class="section-heading"><h1 id="about-title">About me</h1></header>
+            <div class="introduction">
+                <p>Hi! I'm Damian, a <strong>C#/.NET developer</strong> with experience in applications, developer tools and Unity multiplayer games.</p>
+                <p class="current-focus">My current focus is application development with C#/.NET.</p>
+            </div>
+            <div class="about-details">
+                <div>
+                    <h2 class="detail-title">General focus</h2>
+                    <ul class="technology-list" aria-label="Technologies">
+                        <li>C#</li><li>.NET</li><li>ASP.NET Core</li><li>Blazor</li>
+                        <li>Entity Framework Core</li><li>SQL Server</li><li>.NET MAUI</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="detail-title">Links</h2>
+                    <ul class="profile-links">
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan">GitHub <span aria-hidden="true">↗</span></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dbuczek1/">LinkedIn <span aria-hidden="true">↗</span></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://layzflff.itch.io/">itch.io <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Sekcja "O mnie" -->
-<section id="home">
-    <h1>About me</h1>
-    <p>Hi! I'm Damian, a C#/.NET developer with experience in applications, developer tools and Unity multiplayer games.<br>
-    My current focus is application development with C#/.NET.</p>
+    <section id="experience" aria-labelledby="experience-title">
+        <div class="section-content">
+            <header class="section-heading"><h2 id="experience-title">Professional experience</h2></header>
+            <article class="entry" aria-labelledby="black-rose-title">
+                <header class="entry-heading">
+                    <h3 id="black-rose-title">Black Rose Projects</h3>
+                    <p class="entry-kind">Game Developer</p>
+                    <p class="entry-meta">Approximately 10 months</p>
+                </header>
+                <div class="entry-body">
+                    <p>As the sole programmer, I developed and maintained a commercial Unity/C# multiplayer game from scratch to a near-demo stage.</p>
+                    <ul class="responsibilities">
+                        <li>FishNet networking and synchronization.</li>
+                        <li>Data-driven configuration and NPC state machines.</li>
+                        <li>Interactions, inventory, equipment and UI integration.</li>
+                        <li>Bug fixes based on QA feedback.</li>
+                    </ul>
+                    <p class="note">The project is under NDA.</p>
+                </div>
+            </article>
+            <article class="entry" aria-labelledby="crowe-title">
+                <header class="entry-heading">
+                    <h3 id="crowe-title">Crowe</h3>
+                    <p class="entry-kind">Service Desk Administrator</p>
+                    <p class="entry-meta">2022–2025 · 3 years</p>
+                </header>
+                <div class="entry-body">
+                    <p>IT support for SAP and Xpertis users, Windows and access-management troubleshooting, and automation with PowerShell and small C# tools.</p>
+                </div>
+            </article>
+            <div class="education">
+                <h3 class="detail-title">Education &amp; community</h3>
+                <p>Master's studies in IT Project Management. Member of the Hello IT game and application development student club.</p>
+            </div>
+        </div>
+    </section>
 
-    <br><br><br>
-    <h2>General focus</h2>
-    <p>C#, .NET, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, .NET MAUI</p>
+    <section id="projects" aria-labelledby="projects-title">
+        <div class="section-content">
+            <header class="section-heading"><h2 id="projects-title">My Projects</h2></header>
+            <div class="project-group" role="group" aria-labelledby="applications-title">
+                <h3 class="group-title" id="applications-title">Applications</h3>
+                <article class="entry" aria-labelledby="tickets-title">
+                    <header class="entry-heading">
+                        <h4 id="tickets-title">layZTickets</h4>
+                        <p class="entry-kind">Helpdesk application</p>
+                        <div class="entry-links"><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan/layZTickets">GitHub repository <span aria-hidden="true">↗</span></a></div>
+                    </header>
+                    <div class="entry-body">
+                        <p>A helpdesk application for managing support tickets, with categories, priorities, status updates, agent assignment, public replies and internal notes.</p>
+                        <p>Accounts and roles use ASP.NET Core Identity, with access checked on the server and data stored through EF Core and SQL Server.</p>
+                        <dl class="stack"><dt>Technologies</dt><dd>C# · ASP.NET Core · Blazor · Entity Framework Core · SQL Server · ASP.NET Core Identity</dd></dl>
+                    </div>
+                </article>
+                <article class="entry" aria-labelledby="execute-title">
+                    <header class="entry-heading">
+                        <h4 id="execute-title">Execute</h4>
+                        <p class="entry-kind">Routine planner</p>
+                        <p class="entry-meta">In development</p>
+                    </header>
+                    <div class="entry-body">
+                        <p>A routine planner for breaking activities into steps. The current prototype supports editing routines, recording completed and skipped steps, and saving routines and statistics locally.</p>
+                        <dl class="stack"><dt>Technologies</dt><dd>C# · .NET MAUI · XAML · JSON</dd></dl>
+                    </div>
+                </article>
+            </div>
+            <div class="project-group" role="group" aria-labelledby="games-title">
+                <h3 class="group-title" id="games-title">Games &amp; Game Jams</h3>
+                <article class="entry" aria-labelledby="drink-title">
+                    <header class="entry-heading">
+                        <h4 id="drink-title">Drink IT, Trust me</h4>
+                        <p class="entry-kind">Summer GameJam 2024</p>
+                        <div class="entry-links">
+                            <a target="_blank" rel="noopener noreferrer" href="https://ssamaelx.itch.io/drink-it-trust-me">Play on itch.io <span aria-hidden="true">↗</span></a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://itch.io/jam/summer-gamejam-2024/rate/2746943">Jam results <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </header>
+                    <div class="entry-body">
+                        <p class="achievement"><strong>1st place</strong> <span>“Favourite game of the jam”</span></p>
+                        <p>A team-built Unity game about a Renaissance doctor mixing ingredients and treating patients.</p>
+                        <div class="contribution"><h5>My contribution</h5><p>Gameplay interactions, pickup and purchase behaviour, rent and day progression, menu work, bug fixes and build preparation.</p></div>
+                    </div>
+                </article>
+                <article class="entry" aria-labelledby="beelzebuzz-title">
+                    <header class="entry-heading">
+                        <h4 id="beelzebuzz-title">Beelzebuzz Company</h4>
+                        <p class="entry-kind">Hello GameJam 2025</p>
+                        <div class="entry-links">
+                            <a target="_blank" rel="noopener noreferrer" href="https://kubeec.itch.io/beelzebuzz-company">Play on itch.io <span aria-hidden="true">↗</span></a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://itch.io/jam/hello-gamejam-2025/rate/3699388">Jam results <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </header>
+                    <div class="entry-body">
+                        <p class="achievement"><strong>2nd place</strong> <span>Created in 24 hours with team Jenoty</span></p>
+                        <p>A Unity game about managing a satirical hive corporation and balancing its four main indicators.</p>
+                        <div class="contribution"><h5>My contribution</h5><p>Factory indicators and their 3D visualization, the conveyor belt, box drops, hex randomization and scoring.</p></div>
+                    </div>
+                </article>
+                <article class="entry" aria-labelledby="ursula-title">
+                    <header class="entry-heading">
+                        <h4 id="ursula-title">Ursula</h4>
+                        <p class="entry-kind">Cyberiada 2025</p>
+                        <div class="entry-links"><a target="_blank" rel="noopener noreferrer" href="https://cyberdwarves.itch.io/ursula">Play on itch.io <span aria-hidden="true">↗</span></a></div>
+                    </header>
+                    <div class="entry-body">
+                        <p>A sci-fi puzzle project made with Cyber Dwarves for Cyberiada 2025.</p>
+                        <div class="contribution"><h5>My contribution</h5><p>Camera behaviour, save and checkpoint systems, terminals and audio integration.</p></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <br>
-    <h2>Links</h2>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan">GitHub</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dbuczek1/">LinkedIn</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://layzflff.itch.io/">Itch.io</a></p>
-</section>
+    <section id="tools" aria-labelledby="tools-title">
+        <div class="section-content">
+            <header class="section-heading"><h2 id="tools-title">Tools</h2></header>
+            <article class="entry" aria-labelledby="logger-title">
+                <header class="entry-heading">
+                    <h3 id="logger-title">LayZLogger</h3>
+                    <p class="entry-kind">Unity logging tool</p>
+                    <div class="entry-links"><a target="_blank" rel="noopener noreferrer" href="https://assetstore.unity.com/packages/tools/utilities/layzlogger-298699">Unity Asset Store <span aria-hidden="true">↗</span></a></div>
+                </header>
+                <div class="entry-body">
+                    <p>A Unity logging tool for controlling logs without commenting out code or waiting for recompilation.</p>
+                    <p>The version 2 preview adds categories, a dedicated UI Toolkit console, searchable history, filters and source navigation.</p>
+                    <p class="note">Version 1.0 is published. Version 2 is in development.</p>
+                </div>
+            </article>
+            <article class="entry" aria-labelledby="agentkit-title">
+                <header class="entry-heading">
+                    <h3 id="agentkit-title">layZ AgentKit</h3>
+                    <p class="entry-kind">Blender extension · Open source</p>
+                    <div class="entry-links"><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan/layZ-AgentKit">Repository &amp; releases <span aria-hidden="true">↗</span></a></div>
+                </header>
+                <div class="entry-body">
+                    <p>A Blender extension for organizing visual references and working with AI agents through an existing MCP/Python connection.</p>
+                    <p>It supports model inspection, consistent preview views and FBX exports checked by reimporting them in a separate Blender process.</p>
+                    <dl class="stack"><dt>Technologies</dt><dd>Python · Blender API · MCP workflow</dd></dl>
+                </div>
+            </article>
+        </div>
+    </section>
 
-<!-- Sekcja "Doświadczenie" -->
-<section id="experience">
-    <h1>Professional experience</h1>
-    <h3>Black Rose Projects — Game Developer</h3>
-    <p>As the sole programmer, I developed and maintained a commercial Unity/C# multiplayer game from scratch to a near-demo stage over approximately 10 months.<br>
-    My work included FishNet networking and synchronization, data-driven configuration, NPC state machines, interactions, inventory, equipment and UI integration, as well as fixes based on QA feedback. The project is under NDA.</p>
-
-    <h3>Crowe — Service Desk Administrator</h3>
-    <p>Three years of IT support (2022–2025), including support for SAP and Xpertis users, Windows and access-management troubleshooting, and automation with PowerShell and small C# tools.</p>
-
-    <br>
-    <h2>Education &amp; community</h2>
-    <p>Master's studies in IT Project Management. Member of the Hello IT game and application development student club.</p>
-</section>
-
-<!-- Sekcja "Moje Projekty" -->
-<section id="projects">
-    <h1>My Projects</h1>
-    <h2>Applications</h2>
-
-    <h3>layZTickets</h3>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan/layZTickets">Link to the GitHub repository</a></p>
-    <p>A helpdesk application for managing support tickets, with categories, priorities, status updates, agent assignment, public replies and internal notes.<br>
-    Accounts and roles use ASP.NET Core Identity, with access checked on the server and data stored through EF Core and SQL Server.</p>
-    <p>Technologies: C#, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, ASP.NET Core Identity.</p>
-
-    <br>
-    <h3>Execute</h3>
-    <p>In development.</p>
-    <p>A routine planner for breaking activities into steps. The current prototype supports editing routines, recording completed and skipped steps, and saving routines and statistics locally.</p>
-    <p>Technologies: C#, .NET MAUI, XAML, JSON.</p>
-
-    <br><br>
-    <h2>Games &amp; Game Jams</h2>
-
-    <h3>Drink IT, Trust me</h3>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://ssamaelx.itch.io/drink-it-trust-me">Link to the game</a></p>
-    <p><strong>1st place — Summer GameJam 2024</strong> ("Favourite game of the jam"). <a target="_blank" rel="noopener noreferrer" href="https://itch.io/jam/summer-gamejam-2024/rate/2746943">Jam results</a></p>
-    <p>A team-built Unity game about a Renaissance doctor mixing ingredients and treating patients.<br>
-    My work included gameplay interactions, pickup and purchase behaviour, rent and day progression, menu work, bug fixes and build preparation.</p>
-
-    <br>
-    <h3>Beelzebuzz Company</h3>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://kubeec.itch.io/beelzebuzz-company">Link to the game</a></p>
-    <p><strong>2nd place — Hello GameJam 2025.</strong> Created in 24 hours with team Jenoty. <a target="_blank" rel="noopener noreferrer" href="https://itch.io/jam/hello-gamejam-2025/rate/3699388">Jam results</a></p>
-    <p>A Unity game about managing a satirical hive corporation and balancing its four main indicators.<br>
-    My work included factory indicators and their 3D visualization, the conveyor belt, box drops, hex randomization and scoring.</p>
-
-    <br>
-    <h3>Ursula</h3>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://cyberdwarves.itch.io/ursula">Link to the game</a></p>
-    <p>A sci-fi puzzle project made with Cyber Dwarves for Cyberiada 2025.<br>
-    My work included camera behaviour, save and checkpoint systems, terminals and audio integration.</p>
-</section>
-
-<!-- Sekcja "Narzędzia" -->
-<section id="tools">
-    <h1>Tools</h1>
-
-    <h3>LayZLogger</h3>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://assetstore.unity.com/packages/tools/utilities/layzlogger-298699">Link to the Unity Asset Store</a></p>
-    <p>A Unity logging tool for controlling logs without commenting out code or waiting for recompilation.<br>
-    The version 2 preview adds categories, a dedicated UI Toolkit console, searchable history, filters and source navigation.</p>
-    <p>Published version: 1.0. Version 2 is in development.</p>
-
-    <br>
-    <h3>layZ AgentKit</h3>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan/layZ-AgentKit">Link to the GitHub repository and releases</a></p>
-    <p>An open-source Blender extension for organizing visual references and working with AI agents through an existing MCP/Python connection.<br>
-    It supports model inspection, consistent preview views and FBX exports checked by reimporting them in a separate Blender process.</p>
-    <p>Technologies: Python, Blender API, MCP workflow.</p>
-</section>
-
-<!-- Sekcja "Kontakt" -->
-<section id="contact">
-    <h1 id="contactTitle">Contact</h1>
-    <p>You can contact me on <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dbuczek1/">LinkedIn</a> or through <a href="mailto:tamjan001@gmail.com">email</a>.</p>
-</section>
-
+    <section id="contact" aria-labelledby="contact-title">
+        <div class="section-content">
+            <header class="section-heading"><h2 id="contact-title">Contact</h2></header>
+            <p class="contact-text">You can contact me on <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dbuczek1/">LinkedIn</a> or through <a href="mailto:tamjan001@gmail.com">email</a>.</p>
+        </div>
+    </section>
+</main>
 <script src="background.js"></script>
-
-<!-- JavaScript do płynnego przewijania -->
-<script>
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
-
 </body>
 </html>
