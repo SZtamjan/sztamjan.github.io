@@ -17,6 +17,7 @@ uniform float time;
 uniform float scaleX;
 uniform float scaleY;
 uniform float pageScroll;
+uniform vec4 sectionStarts;
 varying vec2 uv;
 
 
@@ -82,14 +83,12 @@ void main(void)
 
 
 
-    for(int i = 0; i < 9; i++)
-        if(pageScroll < float(i))
-            f = 1.0-f;
-
-         if(uv.y < 1.0-fract(pageScroll))
-             f = 1.0-f;
-
-
+    // Alternate the background at the actual section boundaries.
+    float documentY = pageScroll - 1.0 + uv.y;
+    if(documentY >= sectionStarts.x) f = 1.0-f;
+    if(documentY >= sectionStarts.y) f = 1.0-f;
+    if(documentY >= sectionStarts.z) f = 1.0-f;
+    if(documentY >= sectionStarts.w) f = 1.0-f;
 
     f *= uv.x;
 
@@ -170,6 +169,18 @@ gl.vertexAttribPointer(vertexUVLoc, 2, gl.FLOAT, gl.FALSE, 0, vertices.byteLengt
 
 var startTime = new Date().getTime();
 
+
+// Cache section positions and refresh them when content or viewport size changes.
+const sections = Array.from(document.querySelectorAll('section'));
+const sectionStartsLoc = gl.getUniformLocation(program, "sectionStarts");
+function updateSectionStarts() {
+    const starts = sections.slice(1).map(section => section.offsetTop / window.innerHeight);
+    gl.uniform4f(sectionStartsLoc, ...starts);
+}
+const sectionObserver = new ResizeObserver(updateSectionStarts);
+sections.forEach(section => sectionObserver.observe(section));
+window.addEventListener('resize', updateSectionStarts);
+updateSectionStarts();
 
 Update();
 

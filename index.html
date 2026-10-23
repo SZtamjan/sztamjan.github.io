@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,6 +53,8 @@
         } 
 
         .nav-links {
+            width: max-content;
+            white-space: nowrap;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);  /* Wycentrowanie na środku */
@@ -140,6 +142,8 @@
         width: 100vw;
         height: 100vh;
         position: fixed;
+        top: 0;
+        left: 0;
         z-index: -1;
         }   
     </style>
@@ -147,89 +151,120 @@
 <body>
 
 <!-- Pasek nawigacyjny -->
+<nav>
+    <div class="nav-container">
+        <img src="logo.png" class="logo" alt="Damian's logo">
+        <div class="nav-links">
+            <ul>
+                <li><a href="#home">About me</a></li>
+                <li><a href="#experience">Professional experience</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    
-        <nav>
-            <div class="nav-container">
-                <img src="logo.png" class="logo">
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="#home">About me</a></li>
-                        <li><a href="#projects">My Projects</a></li>
-                        <li><a href="#tools">Tools</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-
-<canvas id="backgroundCanvas" class="backgroundCanvas"></canvas>
-<script src="background.js"></script>
+<canvas id="backgroundCanvas" class="backgroundCanvas" aria-hidden="true"></canvas>
 
 <!-- Sekcja "O mnie" -->
 <section id="home">
     <h1>About me</h1>
-    <p>Hi! I'm Damian, a programmer with a passion for creating games and applications.</br>
-    In my work, I focus on delivering high-quality functional solutions.</p>
+    <p>Hi! I'm Damian, a C#/.NET developer with experience in applications, developer tools and Unity multiplayer games.<br>
+    My current focus is application development with C#/.NET.</p>
 
-    </br></br></br>
-    <p><h2>General focus</h2></p>
-    <p>C#, Unity, Unity's packages, Tools</p>
+    <br><br><br>
+    <h2>General focus</h2>
+    <p>C#, .NET, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, .NET MAUI</p>
 
-    </br>
-    <p><h2>Links</h2></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://layzflff.itch.io/">Itch.io</a></p>
+    <br>
+    <h2>Links</h2>
     <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan">GitHub</a></p>
     <p><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dbuczek1/">LinkedIn</a></p>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://layzflff.itch.io/">Itch.io</a></p>
+</section>
+
+<!-- Sekcja "Doświadczenie" -->
+<section id="experience">
+    <h1>Professional experience</h1>
+    <h3>Black Rose Projects — Game Developer</h3>
+    <p>As the sole programmer, I developed and maintained a commercial Unity/C# multiplayer game from scratch to a near-demo stage over approximately 10 months.<br>
+    My work included FishNet networking and synchronization, data-driven configuration, NPC state machines, interactions, inventory, equipment and UI integration, as well as fixes based on QA feedback. The project is under NDA.</p>
+
+    <h3>Crowe — Service Desk Administrator</h3>
+    <p>Three years of IT support (2022–2025), including support for SAP and Xpertis users, Windows and access-management troubleshooting, and automation with PowerShell and small C# tools.</p>
+
+    <br>
+    <h2>Education &amp; community</h2>
+    <p>Master's studies in IT Project Management. Member of the Hello IT game and application development student club.</p>
 </section>
 
 <!-- Sekcja "Moje Projekty" -->
 <section id="projects">
     <h1>My Projects</h1>
-        </br>
-        <p><h3>Ursula</h3></p>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://cyberdwarves.itch.io/ursula">Link to the game</a></p>
-        <p>Project created as part of Cyberiada, a national competition organized with support from the Ministry of Digital Affairs of Poland.</br>You play as the titular Ursula, a sentient machine awakened after years of slumber in the wreckage of a spaceship.</p>
+    <h2>Applications</h2>
 
-        </br>
-        <p><h3>Drink it, trust me!</h3></p>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://ssamaelx.itch.io/drink-it-trust-me">Link to the game</a></p>
-        <p>Project created during an internal Game Jam organized at the DSW University.</br>You are a doctor on whom human life depends. But should all of them be saved?</p>
-        
-        </br>
-        <p><h3>Beelzebuzz Company</h3></p>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://kubeec.itch.io/beelzebuzz-company">Link to the game</a></p>
-        <p>Project created during a 24-hour Game Jam organized at DSW University.</br>You play as Mr. Beezeusz, Hive Manager, tasked with keeping war, propaganda, pollution, and interest in balance - or face beestermination.</p>
+    <h3>layZTickets</h3>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan/layZTickets">Link to the GitHub repository</a></p>
+    <p>A helpdesk application for managing support tickets, with categories, priorities, status updates, agent assignment, public replies and internal notes.<br>
+    Accounts and roles use ASP.NET Core Identity, with access checked on the server and data stored through EF Core and SQL Server.</p>
+    <p>Technologies: C#, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, ASP.NET Core Identity.</p>
 
-        <!-- Dodaj więcej projektów wedle potrzeb -->
+    <br>
+    <h3>Execute</h3>
+    <p>In development.</p>
+    <p>A routine planner for breaking activities into steps. The current prototype supports editing routines, recording completed and skipped steps, and saving routines and statistics locally.</p>
+    <p>Technologies: C#, .NET MAUI, XAML, JSON.</p>
+
+    <br><br>
+    <h2>Games &amp; Game Jams</h2>
+
+    <h3>Drink IT, Trust me</h3>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://ssamaelx.itch.io/drink-it-trust-me">Link to the game</a></p>
+    <p><strong>1st place — Summer GameJam 2024</strong> ("Favourite game of the jam"). <a target="_blank" rel="noopener noreferrer" href="https://itch.io/jam/summer-gamejam-2024/rate/2746943">Jam results</a></p>
+    <p>A team-built Unity game about a Renaissance doctor mixing ingredients and treating patients.<br>
+    My work included gameplay interactions, pickup and purchase behaviour, rent and day progression, menu work, bug fixes and build preparation.</p>
+
+    <br>
+    <h3>Beelzebuzz Company</h3>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://kubeec.itch.io/beelzebuzz-company">Link to the game</a></p>
+    <p><strong>2nd place — Hello GameJam 2025.</strong> Created in 24 hours with team Jenoty. <a target="_blank" rel="noopener noreferrer" href="https://itch.io/jam/hello-gamejam-2025/rate/3699388">Jam results</a></p>
+    <p>A Unity game about managing a satirical hive corporation and balancing its four main indicators.<br>
+    My work included factory indicators and their 3D visualization, the conveyor belt, box drops, hex randomization and scoring.</p>
+
+    <br>
+    <h3>Ursula</h3>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://cyberdwarves.itch.io/ursula">Link to the game</a></p>
+    <p>A sci-fi puzzle project made with Cyber Dwarves for Cyberiada 2025.<br>
+    My work included camera behaviour, save and checkpoint systems, terminals and audio integration.</p>
 </section>
 
-<!-- Sekcja "Umiejętności" -->
+<!-- Sekcja "Narzędzia" -->
 <section id="tools">
     <h1>Tools</h1>
-    <div>
-        <p><h3>LayZLogger</h3></p>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://assetstore.unity.com/packages/slug/298699">Link to the unity asset store</a></p>
-        <p>Tool that helps you manage your logs in Unity</p>
-        
-        </br>
-        <p><h3>String to Equation converter</h3></p>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://assetstore.unity.com/packages/slug/300367">Link to the unity asset store</a></p>
-        <p>Tool that converts string into an equation. Very usefull, especially when your Game Designer didn't specify what "part" of the refund is</p>
-    </div>
+
+    <h3>LayZLogger</h3>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://assetstore.unity.com/packages/tools/utilities/layzlogger-298699">Link to the Unity Asset Store</a></p>
+    <p>A Unity logging tool for controlling logs without commenting out code or waiting for recompilation.<br>
+    The version 2 preview adds categories, a dedicated UI Toolkit console, searchable history, filters and source navigation.</p>
+    <p>Published version: 1.0. Version 2 is in development.</p>
+
+    <br>
+    <h3>layZ AgentKit</h3>
+    <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/SZtamjan/layZ-AgentKit">Link to the GitHub repository and releases</a></p>
+    <p>An open-source Blender extension for organizing visual references and working with AI agents through an existing MCP/Python connection.<br>
+    It supports model inspection, consistent preview views and FBX exports checked by reimporting them in a separate Blender process.</p>
+    <p>Technologies: Python, Blender API, MCP workflow.</p>
 </section>
 
 <!-- Sekcja "Kontakt" -->
 <section id="contact">
     <h1 id="contactTitle">Contact</h1>
-    <form action="#" method="POST">
-        <input type="text" name="name" placeholder="Your Full Name" required>
-        <input type="email" name="email" placeholder="Your email address" required>
-        <textarea name="message" placeholder="Message" rows="5" required></textarea>
-        <input type="submit" value="Send - soon" disabled>
-    </form>
+    <p>You can contact me on <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dbuczek1/">LinkedIn</a> or through <a href="mailto:tamjan001@gmail.com">email</a>.</p>
 </section>
+
+<script src="background.js"></script>
 
 <!-- JavaScript do płynnego przewijania -->
 <script>
