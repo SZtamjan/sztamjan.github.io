@@ -103,6 +103,8 @@ section { min-height: 100svh; padding: 132px 0 96px; }
 .technology-list { display: flex; flex-wrap: wrap; gap: 8px 0; padding: 0; list-style: none; max-width: 600px; }
 .technology-list li { display: flex; align-items: center; }
 .technology-list li:not(:last-child)::after { content: "/"; margin-inline: 13px; color: #888; }
+.ai-development { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--fine-line); max-width: 60ch; }
+.ai-development .technology-list { margin-block: 12px; }
 .profile-links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 24px; }
 
 .entry { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 64px; padding: 40px 0 44px; border-top: 1px solid var(--fine-line); }
